@@ -1,4 +1,4 @@
-# sam
+
 # EADCKD: Entropy-Driven Adaptive Dual-Level Contrastive Knowledge Distillation for Semi-Supervised Medical Image Segmentation
 
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
