@@ -38,40 +38,40 @@ conda activate eadckd
 
 # 安装依赖
 pip install -r requirements.txt
+```
 
 注意：请确保下载预训练 SAM 权重并放置在项目目录下：sam_vit_b_01ec64.pth
 
-## 快速开始 | Quick Start训练
-bash
+## 快速开始 | Quick Start
+
+```bash
 
 python train_semi_SAM_ACDC.py \
     --data_path ./SampleData \
     --dataset /ACDC \
     --sam_checkpoint ./sam_vit_b_01ec64.pth \
-    --max_iterations 30000 \
+    --max_iterations 50000 \
     --batch_size 12 \
     --labeled_bs 6
+```
+训练结果保存在 ./Results/results_ACDC_xxx/fold_X/ 目录下，包括模型权重、log.txt 和 coverage_history.txt。
 
-训练结果保存在 ./Results/results_ACDC_xxx/fold_X/ 目录下，包括模型权重、log.txt 和 coverage_history.txt。测试 / 推理bash
+## 测试 / 推理
+```bash
 
 python test.py \
     --SGDL_model_path ./Results/.../SGDL_best_model.pth
-
+```
 
 更多结果和对比见论文 Table 1 & Table 2。
-可视化示例 | Visualization ExamplesPrediction Examples
+## 可视化示例 | Visualization ExamplesPrediction Examples
 
 
-引用 | Citation如果我们的工作对你的研究有帮助，请考虑引用：bibtex
+## 引用 | Citation
+如果我们的工作对你的研究有帮助，请考虑引用：bibtex
+```bash
 
-@article{guo2025eadckd,
-  title={Entropy-Driven Adaptive Dual-Level Contrastive Knowledge Distillation for Semi-Supervised Medical Image Segmentation},
-  author={Ji Li and others},
-  journal={arXiv preprint},
-  year={2025},
-  note={Code: https://github.com/yourusername/EADCKD}
-}
-
+```
 
 
 
