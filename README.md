@@ -7,33 +7,35 @@
 
 ![Framework Overview](figures/framework.png)  
 *Figure: Overall architecture of the EADCKD framework*
+Official code for "EADCKD: Entropy-Driven Adaptive Dual-Level Contrastive Knowledge Distillation for Semi-Supervised Medical Image Segmentation"
+##  Introduction
 
-## 简介 | Introduction
+EADCKD is an efficient semi-supervised medical image segmentation framework designed for clinical scenarios with extremely scarce labeled data. It significantly improves the utilization rate of unlabeled data and enhances segmentation accuracy.
 
-EADCKD 是一个高效的半监督医学图像分割框架，针对标注数据极度稀缺的临床场景，显著提升未标记数据的利用率和分割精度。
-
-## 安装 | Installation
+## Installation
 
 ```bash
-# 克隆仓库
+# 
 git clone https://github.com/yourusername/EADCKD.git
 cd EADCKD
 
-# 创建虚拟环境（推荐 conda）
+# 
 conda create -n eadckd python=3.8
 conda activate eadckd
 
-# 安装依赖
+# 
 pip install -r requirements.txt
 ```
 
-注意：请确保下载预训练 SAM 权重并放置在项目目录下：sam_vit_b_01ec64.pth
+Note: Please ensure that you download the pretrained SAM weight file and place it in the project directory: [sam_vit_b_01ec64.pth] (https://www.kaggle.com/datasets/sacuscreed/sam-vit-b-01ec64-pth)
 
-## 快速开始 | Quick Start
+
+
+## Training
 
 ```bash
 
-python train_semi_SAM_ACDC.py \
+python train_EADCKD_SAM_ACDC.py \
     --data_path ./SampleData \
     --dataset /ACDC \
     --sam_checkpoint ./sam_vit_b_01ec64.pth \
@@ -41,28 +43,30 @@ python train_semi_SAM_ACDC.py \
     --batch_size 12 \
     --labeled_bs 6
 ```
-训练结果保存在 ./Results/results_ACDC_xxx/fold_X/ 目录下，包括模型权重、log.txt 和 coverage_history.txt。
+The training results are saved in the ./Results/results_ACDC_xxx/fold_X/ directory, including model checkpoints, log.txt, and coverage_history.txt.
 
-## 测试 / 推理
+## Test 
 ```bash
 
 python test.py \
-    --SGDL_model_path ./Results/.../SGDL_best_model.pth
+    --EADCKD_model_path ./Results/.../EADCKD_best_model.pth
 ```
 
-更多结果和对比见论文 Table 1 & Table 2。
-## 可视化示例 | Visualization ExamplesPrediction Examples
+More results and comparisons can be found in Table 1 and Table 2 of the paper.
+##  Visualization ExamplesPrediction Examples
 
+##  Acknowledgements
 
-## 引用 | Citation
+Our code is based on[SSL4MIS](https://github.com/HiLab-git/SSL4MIS).
+
+##  Questions
+
+If you have any questions, welcome contact me at 'lij20210919@gmail.com'
+
+##  Citation
 如果我们的工作对你的研究有帮助，请考虑引用：bibtex
 ```bash
 
 ```
 
 
-
-
-
-# 安装额外工具（用于评估、计算成本等）
-pip install medpy thop torchsummary scikit-image scipy
