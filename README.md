@@ -27,7 +27,7 @@ conda activate eadckd
 pip install -r requirements.txt
 ```
 
-Note: Please ensure that you download the pretrained SAM weight file and place it in the project directory: [sam_vit_b_01ec64.pth] (https://www.kaggle.com/datasets/sacuscreed/sam-vit-b-01ec64-pth)
+Note: Please ensure that you download the pretrained SAM weight file and place it in the project directory: [sam_vit_b_01ec64.pth](https://www.kaggle.com/datasets/sacuscreed/sam-vit-b-01ec64-pth)
 
 
 
@@ -57,7 +57,7 @@ More results and comparisons can be found in Table 1 and Table 2 of the paper.
 
 ##  Acknowledgements
 
-Our code is based on[SSL4MIS](https://github.com/HiLab-git/SSL4MIS).
+Our code is based on [SSL4MIS](https://github.com/HiLab-git/SSL4MIS).
 
 ##  Questions
 
