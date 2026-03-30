@@ -16,7 +16,7 @@ EADCKD is an efficient semi-supervised medical image segmentation framework desi
 
 ```bash
 # 
-git clone https://github.com/yourusername/EADCKD.git
+git clone https://github.com/lij20210919-prog/EADCKD.git
 cd EADCKD
 
 # 
