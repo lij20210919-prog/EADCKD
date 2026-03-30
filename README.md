@@ -64,7 +64,7 @@ Our code is based on [SSL4MIS](https://github.com/HiLab-git/SSL4MIS).
 If you have any questions, welcome contact me at 'lij20210919@gmail.com'
 
 ##  Citation
-如果我们的工作对你的研究有帮助，请考虑引用：bibtex
+
 ```bash
 
 ```
